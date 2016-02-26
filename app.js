@@ -33,6 +33,7 @@ var app = {
     },
     pluginTest : function() {
         document.getElementById('button').addEventListener('click', function() {
+            app.showIt('info', 'button clicked');
             getWifiInfo(
                function (d) { app.showIt('content', 'wifi info:' + d); },
                function (e) { app.showIt('info', 'error' + e); }
